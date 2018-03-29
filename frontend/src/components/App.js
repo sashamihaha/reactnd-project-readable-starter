@@ -49,7 +49,7 @@ class App extends Component {
               <ul>
                 {this.props.categories !== null ?
                   this.props.categories.map(category => (
-                    <Link to={{ pathname: `/category/${category.name}` }} key={category.name}>
+                    <Link to={{ pathname: `/${category.name}` }} key={category.name}>
                       <li key={category.path}>{category.name}</li>
                     </Link>)) :
                   ""}
@@ -77,7 +77,7 @@ class App extends Component {
             </div>
           </div>
         )} />
-        <Route path="/category/:path" component={Category} />
+        <Route path="/:path" component={Category} />
         <Route path="/posts/:postId" component={PostDetails} />
       </div>
 
